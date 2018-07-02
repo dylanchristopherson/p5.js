@@ -1,3 +1,6 @@
 # p5.js
 
-p5.js work
+The p5CompleteLibrary folder contains the files from the p5.js site:
+https://p5js.org/download/
+
+This project is for Github exploration as well as p5.js exploration
