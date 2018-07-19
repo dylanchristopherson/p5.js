@@ -1,10 +1,8 @@
 var c;
-var WIDTH = 400;
-var HEIGHT = 400;
 
 function setup() {
   // put setup code here
-  createCanvas(WIDTH,HEIGHT);
+  createCanvas(400,400);
   c = new Circle();
 }
 
@@ -31,8 +29,8 @@ function Circle() {
    
  
  // this.y = mouseY;
-    if(this.y >= HEIGHT) {
-      this.y = HEIGHT;
+    if(this.y >= height) {
+      this.y = height;
     }
     if(this.y <= 0) {
       this.y = 0;
@@ -44,7 +42,7 @@ function Circle() {
   }
 
   this.up = function() {
-    this.y = this.y - 100;
+    this.y = this.y - 50;
     this.g = .1;
   }
 
