@@ -1,4 +1,5 @@
 var c;
+var grav = .1;
 
 function setup() {
   // put setup code here
@@ -24,8 +25,8 @@ function Circle() {
 
   this.update = function() {
     
-    this.g = this.g + (this.g * .1);
-    this.y = this.y + 2 + this.g;
+    grav = grav + .1;
+    this.y = this.y + 2 + grav;
    
  
  // this.y = mouseY;
@@ -34,6 +35,7 @@ function Circle() {
     }
     if(this.y <= 0) {
       this.y = 0;
+      grav = 0;
     }
   }
  
@@ -43,7 +45,7 @@ function Circle() {
 
   this.up = function() {
     this.y = this.y - 50;
-    this.g = .1;
+    grav = grav - 2;
   }
 
 }
