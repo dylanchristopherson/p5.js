@@ -7,3 +7,5 @@ This project is for Github exploration as well as p5.js exploration
 
 To view the index.html files, go to the files, copy the link, and then paste into the following website:
 http://htmlpreview.github.io/
+
+ctrl+opt+j opens debugger window in chrome

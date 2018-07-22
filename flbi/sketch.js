@@ -1,11 +1,8 @@
 var c;
-var WIDTH = 400;
-var HEIGHT = 400
-
 
 function setup() {
   // put setup code here
-  createCanvas(WIDTH,HEIGHT);
+  createCanvas(400,400);
   c = new Circle();
 }
 
@@ -27,7 +24,7 @@ function Circle() {
   this.lift = -10;
 
   this.update = function() {
-    
+
     this.velocity += this.gravity; 
     this.y += this.velocity;
  
