@@ -9,3 +9,4 @@ To view the index.html files, go to the files, copy the link, and then paste int
 http://htmlpreview.github.io/
 
 ctrl+opt+j opens debugger window in chrome
+ctrl+shift+s opens debugger window in firefox
