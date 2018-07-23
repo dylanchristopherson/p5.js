@@ -10,8 +10,9 @@ function setup() {
 
 function draw() {
   // put drawing code here
-  // clear();   
  
+  background(51);               
+
   if (frameCount % 100 == 0) {
     pipes.push(new Pipe());
   }
@@ -26,12 +27,8 @@ function draw() {
     }
   
 
-    if (pipes[i].hits(c)) {
-      console.log("HIT");
-    }
+    pipes[i].hits(c);
   }
-
-  background(51);               
   c.update();
   c.show();
  
@@ -77,27 +74,31 @@ function Pipe() {
   this.x = width;
   this.w = 20;
   this.speed = 2;
-  this.higlight = false;
+  this.highlight = false;
 
   this.show = function() {
-    fill(255);
 
-    if(this.hightlight == true) {
+    if (this.highlight == true) {
       fill(255, 0, 0);
     }
+    else {
+      fill(255,255,255);
+    }
+
     rect(this.x, 0, this.w, this.topp);
     rect(this.x, height-this.bottom, this.w, this.bottom);
-i
   }
 
   this.hits = function(Circle) {
-    if (Circle.y < this.top || Circle.y > height -this.bottom) {
-      if (Circle.x > this.w && Circle.x < this.x + this.w) {
-        this.hightlight = true;
-	return true;
+    if (Circle.y < this.topp || Circle.y > height-this.bottom) {
+      console.log("x", this.x);
+      console.log("w", this.w);
+      if ((Circle.x > this.x) && (Circle.x < this.x + this.w)) {
+        this.highlight = true;
+        return true;
       }	    
     }
-//`	  this.hightlight = false;
+    this.highlight = false;
     return false;
   }
 
